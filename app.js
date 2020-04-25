@@ -1,5 +1,5 @@
 const express = require("express");
-const config = require("config");
+const config = require("./node_modules/config");
 const mongoose = require("mongoose"); 
 const app = express();
 
