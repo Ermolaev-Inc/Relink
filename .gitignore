@@ -2,8 +2,6 @@
 # Created by https://www.gitignore.io/api/node,react,macos
 # Edit at https://www.gitignore.io/?templates=node,react,macos
 
-default.json
-
 ### macOS ###
 # General
 .DS_Store
@@ -151,5 +149,6 @@ psd
 thumb
 sketch
 
+config
 
 # End of https://www.gitignore.io/api/node,react,macos
