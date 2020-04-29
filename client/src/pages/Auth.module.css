@@ -1,0 +1,124 @@
+input::-webkit-input-placeholder {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 29px;
+  color: #FFFFFF;
+}
+
+input:-moz-placeholder {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 29px;
+  color: #FFFFFF;
+}
+
+input::-moz-placeholder {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 29px;
+  color: #FFFFFF;
+}
+
+input:-ms-input-placeholder {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 29px;
+  color: #FFFFFF;
+}
+
+input {
+  font-family: Roboto;
+  padding: 9px 15px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 29px;
+  color: #FFFFFF;
+}
+
+.auth_page__container {
+  position: absolute;
+  width: 610px;
+  height: 449px;
+  background: #2E2E2E;
+  border-radius: 50px;
+  left: 50%;
+  margin-left: -305px;
+  top: 50%;
+  margin-top: -240px;
+}
+
+.auth_page__container .auth_page__container__title {
+  margin-left: 242px;
+  margin-top: 42px;
+}
+
+.auth_page__container .auth_page__container__input_fields {
+  width: 507px;
+  height: 129px;
+  margin-left: 52px;
+  margin-top: 41px;
+}
+
+.auth_page__container .auth_page__container__input_fields .email_input_form .email_input {
+  width: 507px;
+  height: 47px;
+  background: #2E2E2E;
+  -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+
+.auth_page__container .auth_page__container__input_fields .password_input_form .password_input {
+  margin-top: 35px;
+  width: 507px;
+  height: 47px;
+  background: #2E2E2E;
+  -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+
+.auth_page__container .auth_page__container__actions .login_btn {
+  display: block;
+  width: 128px;
+  height: 41px;
+  background: #5CC4FF;
+  border-radius: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  color: #FFFFFF;
+  margin-top: 60px;
+  margin-left: 241px;
+}
+
+.auth_page__container .auth_page__container__actions .create_btn {
+  display: block;
+  width: 128px;
+  height: 41px;
+  border: 1px solid #5CC4FF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #2E2E2E;
+  border-radius: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  color: #FFFFFF;
+  margin-left: 241px;
+  margin-top: 15px;
+}
+/*# sourceMappingURL=Auth.module.css.map */
