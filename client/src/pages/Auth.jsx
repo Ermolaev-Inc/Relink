@@ -3,13 +3,19 @@ import classes from "./Auth.module.css";
 import normalize from "./normalize.css";
 import Relink_logo from "./Relink_logo.svg";
 import { useHttp } from '../hooks/http.hook';
+import { useEffect } from "react";
 
 export const AuthPage = () => {
-    const {loading, error, request} = useHttp();
+    const {loading, error, request, clearError} = useHttp();
     const [form, setForm] = useState({
         email: '',
         password: ''
     });
+    useEffect(() => {
+        console.log("Some Error");
+
+        clearError();    
+    }, [error, clearError]);
     const changeHandler = event => {
         setForm({...form, [event.target.name]: event.target.value})
     };
