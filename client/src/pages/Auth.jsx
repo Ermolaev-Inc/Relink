@@ -1,9 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./Auth.module.css";
 import normalize from "./normalize.css";
-import Relink_logo from "./Relink_logo.svg"
+import Relink_logo from "./Relink_logo.svg";
+import { useHttp } from '../hooks/http.hook';
 
 export const AuthPage = () => {
+    const {loading, error, request} = useHttp();
+    const [form, setForm] = useState({
+        email: '',
+        password: ''
+    });
+    const changeHandler = event => {
+        setForm({...form, [event.target.name]: event.target.value})
+    };
+    const registerHandler = async () => {
+        try {
+            const data = await request("/api/auth/register", "POST", {...form});
+            console.log("Data", data);
+        } catch (error) {};
+    };
+
     return(
         <div className={classes.auth_page__container}>
             <div className={classes.auth_page__container__title}>
@@ -17,6 +33,7 @@ export const AuthPage = () => {
                         type="text"
                         name="email"
                         className={classes.email_input}
+                        onChange={changeHandler}
                     />
                 </div>
                 <div className={classes.password_input_form}>
@@ -26,12 +43,22 @@ export const AuthPage = () => {
                         type="text"
                         name="password"
                         className={classes.password_input}
+                        onChange={changeHandler}
                     />
                 </div>
             </div>
             <div className={classes.auth_page__container__actions}>
-                <button className={classes.login_btn}>Login</button>
-                <button className={classes.create_btn}>Create</button>
+                <button 
+                    className={classes.login_btn}
+                    disabled={loading}
+                >Login
+                </button>
+                <button 
+                    className={classes.create_btn}
+                    onClick={registerHandler}
+                    disabled={loading}
+                >Create
+                </button>
             </div>
         </div>
     )
