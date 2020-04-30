@@ -4,8 +4,11 @@ import normalize from "./normalize.css";
 import Relink_logo from "./Relink_logo.svg";
 import { useHttp } from '../hooks/http.hook';
 import { useEffect } from "react";
+import { useContext } from "react";
+import { AuthContext } from "../context/AuthContext";
 
 export const AuthPage = () => {
+    const auth = useContext(AuthContext);
     const {loading, error, request, clearError} = useHttp();
     const [form, setForm] = useState({
         email: '',
@@ -28,7 +31,7 @@ export const AuthPage = () => {
     const loginHandler = async () => {
         try {
             const data = await request("/api/auth/login", "POST", {...form});
-            console.log("Data", data);
+            auth.login(data.token, data.userId);
         } catch (error) {};
     };
 
