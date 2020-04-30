@@ -25,6 +25,12 @@ export const AuthPage = () => {
             console.log("Data", data);
         } catch (error) {};
     };
+    const loginHandler = async () => {
+        try {
+            const data = await request("/api/auth/login", "POST", {...form});
+            console.log("Data", data);
+        } catch (error) {};
+    };
 
     return(
         <div className={classes.auth_page__container}>
@@ -56,6 +62,7 @@ export const AuthPage = () => {
             <div className={classes.auth_page__container__actions}>
                 <button 
                     className={classes.login_btn}
+                    onClick={loginHandler}
                     disabled={loading}
                 >Login
                 </button>
