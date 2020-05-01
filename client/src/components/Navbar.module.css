@@ -1,0 +1,39 @@
+a:-webkit-any-link {
+  color: #FFFFFF;
+}
+
+.wrapper {
+  height: 64px;
+  width: 100%;
+  background: #2E2E2E;
+}
+
+.wrapper .container {
+  position: relative;
+  width: 1280px;
+  height: 64px;
+  margin: 0 auto;
+}
+
+.wrapper .container .container__logo {
+  position: absolute;
+  top: 18px;
+}
+
+.wrapper .container ul {
+  position: absolute;
+  top: 18px;
+  left: 793px;
+}
+
+.wrapper .container ul li {
+  display: inline;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  margin-left: 100px;
+  color: #FFFFFF !important;
+}
+/*# sourceMappingURL=Navbar.module.css.map */
