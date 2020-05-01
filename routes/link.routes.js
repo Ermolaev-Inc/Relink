@@ -10,12 +10,16 @@ router.post("/generate", async (req, res) => {
 });
 router.get("/", async (req, res) => {
     try {
+        const links = await Link.find({ owner: null });
+        res.json(links);
     } catch (error) {
         res.status(500).json( { message: "Try again :(" } );
     };
 });
 router.get("/:id", async (req, res) => {
     try {
+        const link = await Link.findById(req.params.id);
+        res.json(link);
     } catch (error) {
         res.status(500).json( { message: "Try again :(" } );
     };
