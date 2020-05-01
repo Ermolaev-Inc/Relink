@@ -1,10 +1,18 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { NavLink, useHistory } from 'react-router-dom';
 import classes from "./Navbar.module.css";
 import normalize from "../pages/normalize.css";
 import Logo from "./Relink.svg"
+import { AuthContext } from '../context/AuthContext';
 
 export const Navbar = () => {
+    const history = useHistory();
+    const auth = useContext(AuthContext);
+    const logoutHandler = event => {
+        event.preventDefault();
+        auth.logout();
+        history.push('/');
+    };
     return(
         <div className={classes.wrapper}>
             <div className={classes.container}>
@@ -12,7 +20,7 @@ export const Navbar = () => {
                 <ul>
                     <li><NavLink to="/create">Create</NavLink></li>
                     <li><NavLink to="/links">Links</NavLink></li>
-                    <li><a href="/">Leave</a></li>
+                    <li><a href="/" onClick={logoutHandler}>Leave</a></li>
                 </ul>
             </div>
         </div>
