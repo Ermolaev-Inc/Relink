@@ -17,7 +17,7 @@ export const CreatePage = () => {
                 const linkL = data.link.to
                 const linkCard = (
                     <div className={classes.card}>
-                        {linkL}
+                        <a href={linkL}>{linkL}</a>
                     </div>   
                 )
                 ReactDOM.render(linkCard, document.getElementById('card'))
