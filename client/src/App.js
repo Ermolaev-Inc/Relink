@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { useAuth } from "./hooks/auth.hook";
 import { AuthContext } from './context/AuthContext';
 import { Navbar } from "./components/Navbar";
+import { Footer } from './components/Footer';
 
 function App() {
   const {token, login, logout, userId} = useAuth()
@@ -18,6 +19,7 @@ function App() {
         <div>
           {routes}
         </div>
+        { isAuthenticated && <Footer /> }
       </Router>
     </AuthContext.Provider>
   );

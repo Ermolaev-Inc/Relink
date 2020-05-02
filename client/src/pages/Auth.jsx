@@ -47,6 +47,7 @@ export const AuthPage = () => {
                         id="email"
                         type="text"
                         name="email"
+                        value={form.email}
                         className={classes.email_input}
                         onChange={changeHandler}
                     />
@@ -57,6 +58,7 @@ export const AuthPage = () => {
                         id="password"
                         type="text"
                         name="password"
+                        value={form.password}
                         className={classes.password_input}
                         onChange={changeHandler}
                     />

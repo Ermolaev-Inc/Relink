@@ -1,4 +1,4 @@
-const {Router} = reuqire("express");
+const {Router} = require("express");
 const Link = require("../models/Link");
 const config = require("config");
 const auth = require("../middleware/auth.middleware");
