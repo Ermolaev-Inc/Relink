@@ -9,7 +9,7 @@ const config = require("config")
 router.post(
     "/register", 
     [
-        check("email", "Incorrect email").isEmail(),
+        check("email", "Incorrect email"),
         check("password", "Min - 6 characters").isLength({ min: 6 })
     ],
     async (req, res) => {
@@ -39,7 +39,7 @@ router.post(
 router.post(
     "/login", 
     [
-        check("email", "Incorrect email").normalizeEmail().isEmail(),
+        check("email", "Incorrect email"),
         check("password", "Incorrect password").exists()
     ],
     async (req, res) => {

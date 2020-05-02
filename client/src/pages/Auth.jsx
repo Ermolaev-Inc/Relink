@@ -43,7 +43,7 @@ export const AuthPage = () => {
             <div className={classes.auth_page__container__input_fields}>
                 <div className={classes.email_input_form}>
                     <input 
-                        placeholder="Email"
+                        placeholder="Login"
                         id="email"
                         type="text"
                         name="email"
