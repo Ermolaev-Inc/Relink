@@ -56,7 +56,7 @@ export const AuthPage = () => {
                     <input 
                         placeholder="Password"
                         id="password"
-                        type="text"
+                        type="password"
                         name="password"
                         value={form.password}
                         className={classes.password_input}
