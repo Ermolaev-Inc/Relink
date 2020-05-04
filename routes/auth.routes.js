@@ -19,7 +19,7 @@ router.post(
             if (!errors.isEmpty()) {
                 return res.status(400).json({
                     errors: errors.array(),
-                    message: "Incorrect"
+                    message: "Min - 6 characters"
                 });
             };
             const {email, password} = req.body

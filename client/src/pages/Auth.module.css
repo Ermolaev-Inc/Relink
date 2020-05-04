@@ -87,6 +87,16 @@ input {
   border-radius: 15px;
 }
 
+.auth_page__container .auth_page__container__input_fields .label {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 29px;
+  margin-left: 14px;
+  color: #FFFFFF;
+}
+
 .auth_page__container .auth_page__container__actions .login_btn {
   display: block;
   width: 128px;

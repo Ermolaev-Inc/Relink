@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import classes from "./Auth.module.css";
 import normalize from "./normalize.css";
+import ReactDOM from 'react-dom';
 import Relink_logo from "./Relink_logo.svg";
 import { useHttp } from '../hooks/http.hook';
 import { useEffect } from "react";
@@ -16,7 +17,6 @@ export const AuthPage = () => {
     });
     useEffect(() => {
         console.log("Some Error");
-
         clearError();    
     }, [error, clearError]);
     const changeHandler = event => {
@@ -34,6 +34,14 @@ export const AuthPage = () => {
             auth.login(data.token, data.userId);
         } catch (error) {};
     };
+    const validatorLabel = (
+        <div>
+            Min - 6 characters
+        </div>
+    );
+    const passwordHandler = () => {
+        ReactDOM.render(validatorLabel, document.getElementById('label'));
+    };
 
     return(
         <div className={classes.auth_page__container}>
@@ -43,6 +51,7 @@ export const AuthPage = () => {
             <div className={classes.auth_page__container__input_fields}>
                 <div className={classes.email_input_form}>
                     <input 
+                        required
                         placeholder="Login"
                         id="email"
                         type="text"
@@ -54,6 +63,7 @@ export const AuthPage = () => {
                 </div>
                 <div className={classes.password_input_form}>
                     <input 
+                        required
                         placeholder="Password"
                         id="password"
                         type="password"
@@ -61,8 +71,10 @@ export const AuthPage = () => {
                         value={form.password}
                         className={classes.password_input}
                         onChange={changeHandler}
+                        onFocus={passwordHandler}
                     />
                 </div>
+                <div className={classes.label} id="label"></div>
             </div>
             <div className={classes.auth_page__container__actions}>
                 <button 
