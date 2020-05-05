@@ -54,11 +54,11 @@ router.post(
             const {email, password} = req.body;
             const user = await User.findOne({ email });
             if (!user) {
-              return res.status(400).json({ message: "Error :(" })  
+              return res.status(400).json({ message: "Incorrect login" })  
             };
             const isMatch = await bcrypt.compare(password, user.password);
             if (!isMatch) {
-                return res.status(400).json({ message: "Password doesn't match" })
+                return res.status(400).json({ message: "Incorrect password" })
             };
             const token = jwt.sign(
                 { userId: user.id },

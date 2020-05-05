@@ -13,7 +13,7 @@ export const useHttp = () => {
             const respons = await fetch(url, { method, body, headers });
             const data = await respons.json();
             if (!respons.ok) {
-                throw new Error("Something is wrong" || data.message); 
+                throw new Error(data.message); 
             };
             setLoading(false);
             return data;
