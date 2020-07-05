@@ -22,8 +22,3 @@ Relink is a site for reducing links
 ```
 6. In the main directory use
 `npm run dev`
-
-
-
-
-Copyright © 2020 Ermolaev Ilya. All rights reserved.
