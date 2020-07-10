@@ -14,10 +14,10 @@ Relink is a site for reducing links
 5. In the config create “default.json”
 ```
 {
-	"port": 5000,
-	"jwtSecret": "<your jwtSecret>",
-	"mongoUri": "<your mongoUri>",
-	"baseUrl": "http://localhost:5000"
+  "port": 5000,
+  "jwtSecret": "<your jwtSecret>",
+  "mongoUri": "<your mongoUri>",
+  "baseUrl": "http://localhost:5000"
 }
 ```
 6. In the main directory use
